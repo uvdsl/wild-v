@@ -2,7 +2,7 @@
   <Toolbar>
     <template #left>
       <Avatar v-if="img" :image="img" shape="circle" />
-      <a :href="webId">
+      <a v-if="webId" :href="webId">
         <span>{{ name }}</span>
       </a>
     </template>
