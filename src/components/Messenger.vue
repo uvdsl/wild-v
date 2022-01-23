@@ -30,13 +30,13 @@
   </div>
 
   <div>
-      <SpeedDial
-        :model="speedDialActions"
-        type="circle"
-        :radius="75"
-        direction="left"
-        showIcon="pi pi-ellipsis-h"
-      />
+    <SpeedDial
+      :model="speedDialActions"
+      type="circle"
+      :radius="75"
+      direction="left"
+      showIcon="pi pi-ellipsis-h"
+    />
   </div>
 
   <!-- :style="{ 
@@ -544,6 +544,7 @@ export default defineComponent({
     bottom: 0;
     right: calc(50% - 2rem);
     padding-bottom: 15px;
+    -webkit-tap-highlight-color: transparent;
   }
   .sizing {
     height: calc(100vh - 240px);
