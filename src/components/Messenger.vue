@@ -120,7 +120,7 @@ export default defineComponent({
       },
       {
         label: "Delete",
-        icon: "pi pi-times",
+        icon: "pi pi-trash",
         command: () => {
           if (!isSaveable.value) {
             toast.add({
