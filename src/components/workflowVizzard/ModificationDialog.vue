@@ -11,59 +11,68 @@
     <!-- Content -->
     <div class="grid">
       <b class="col-1">Label</b>
-      <InputText class="col" v-model="node_modified.data.label" />
+      <div class="p-inputgroup col col-offset-2 md:col-offset-1">
+        <InputText v-model="node_modified.data.label" />
+      </div>
     </div>
 
     <div class="grid">
       <b class="col-1">Type</b>
-      <span class="col flex flex-wrap justify-content-between">
-      <div class="p-field-radiobutton col">
-        <RadioButton
-          id="Atomic"
-          v-model="node_modified.data.type"
-          :value="WILD('AtomicActivity col')"
-        />
-        <label for="Atomic"> Atomic</label>
-      </div>
-      <div class="p-field-radiobutton col">
-        <RadioButton
-          id="Interface"
-          v-model="node_modified.data.type"
-          :value="WILD('InterfaceActivity')"
-        />
-        <label for="Interface"> Interface</label>
-      </div>
-      <div class="p-field-radiobutton col">
-        <RadioButton
-          id="Conditional"
-          v-model="node_modified.data.type"
-          :value="WILD('ConditionalActivity')"
-        />
-        <label for="Conditional"> Conditional</label>
-      </div>
-      <div class="p-field-radiobutton col">
-        <RadioButton
-          id="Parallel"
-          v-model="node_modified.data.type"
-          :value="WILD('ParallelActivity')"
-        />
-        <label for="Parallel"> Parallel</label>
-      </div>
-      <div class="p-field-radiobutton col">
-        <RadioButton
-          id="Sequential"
-          v-model="node_modified.data.type"
-          :value="WILD('SequentialActivity')"
-        />
-        <label for="Sequential"> Sequential</label>
-      </div>
+      <span
+        class="
+          col col-offset-2
+          md:col-offset-1
+          flex flex-wrap
+          justify-content-between
+        "
+        style="max-width:400px"
+      >
+        <div class="p-field-radiobutton col">
+          <RadioButton
+            id="Atomic"
+            v-model="node_modified.data.type"
+            :value="WILD('AtomicActivity col')"
+          />
+          <label for="Atomic"> Atomic</label>
+        </div>
+        <div class="p-field-radiobutton col">
+          <RadioButton
+            id="Conditional"
+            v-model="node_modified.data.type"
+            :value="WILD('ConditionalActivity')"
+          />
+          <label for="Conditional"> Conditional</label>
+        </div>
+        <div class="p-field-radiobutton col">
+          <RadioButton
+            id="Parallel"
+            v-model="node_modified.data.type"
+            :value="WILD('ParallelActivity')"
+          />
+          <label for="Parallel"> Parallel</label>
+        </div>
+        <div class="p-field-radiobutton col">
+          <RadioButton
+            id="Sequential"
+            v-model="node_modified.data.type"
+            :value="WILD('SequentialActivity')"
+          />
+          <label for="Sequential"> Sequential</label>
+        </div>
+         <div class="p-field-radiobutton col">
+          <RadioButton
+            id="Interface"
+            v-model="node_modified.data.type"
+            :value="WILD('InterfaceActivity')"
+          />
+          <label for="Interface"> Interface</label>
+        </div>
       </span>
     </div>
-    
 
     <div class="grid">
       <b class="col-1">Children</b>
-      <div class="p-inputgroup col">
+      <div class="p-inputgroup col col-offset-2 md:col-offset-1">
         <InputText
           placeholder="#childActivity"
           v-model="child_label_to_add"
@@ -139,7 +148,7 @@ export default defineComponent({
       addChild,
       deleteChild,
       submit,
-      WILD
+      WILD,
     };
   },
 });
