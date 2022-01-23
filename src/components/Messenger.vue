@@ -45,7 +45,10 @@
       right: 0, 
       'margin': '10px',
       'margin-bottom': '13px'}" -->
-  <Toast position="bottom-right" />
+  <Toast
+    position="bottom-right"
+    :breakpoints="{ '420px': { width: '100%', right: '0', left: '0' } }"
+  />
 
   <ModificationDialog
     :key="showDialog"
