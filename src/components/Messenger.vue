@@ -1,6 +1,6 @@
 <template>
-  <div class="p-grid">
-    <div class="p-col-12 p-md-6 p-md-offset-3">
+  <div class="grid">
+    <div class="col md:col-6 md:col-offset-3">
       <div class="p-inputgroup">
         <Button icon="pi pi-search" @click="fetchWorkflowFromURI" />
         <InputText
@@ -13,8 +13,8 @@
     </div>
   </div>
 
-  <div class="p-grid">
-    <div class="p-col">
+  <div class="grid">
+    <div class="col">
       <div class="border sizing">
         <WorkflowVizzard
           :treeDataInput="treeData"
@@ -24,7 +24,7 @@
         />
       </div>
     </div>
-    <div class="p-col">
+    <div class="col">
       <Textarea v-model="ttl" @focusout="updateFromTTL" class="sizing" />
     </div>
   </div>
@@ -529,11 +529,11 @@ export default defineComponent({
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.p-grid {
+.grid {
   margin: 5px;
 }
 // .p-inputgroup {
-//   width: 50%;
+//   width: 100%;
 // }
 // TextArea {
 // height: 100%;
