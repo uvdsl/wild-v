@@ -1,13 +1,15 @@
 <template>
   <div class="p-grid">
-    <div class="p-inputgroup p-col-6 p-row p-offset-3">
-      <Button icon="pi pi-search" @click="fetchWorkflowFromURI" />
-      <InputText
-        placeholder="https://example.org/ex/workflow.ttl"
-        v-model="workflow_baseIRI"
-        @keyup.enter="fetchWorkflowFromURI"
-      />
-      <Button label="Search" @click="fetchWorkflowFromURI" />
+    <div class="p-col-12 p-md-6 p-md-offset-3">
+      <div class="p-inputgroup">
+        <Button icon="pi pi-search" @click="fetchWorkflowFromURI" />
+        <InputText
+          placeholder="https://example.org/ex/workflow.ttl"
+          v-model="workflow_baseIRI"
+          @keyup.enter="fetchWorkflowFromURI"
+        />
+        <Button label="GET" @click="fetchWorkflowFromURI" />
+      </div>
     </div>
   </div>
 
@@ -27,8 +29,7 @@
     </div>
   </div>
 
-  <div class="p-grid">
-    <div class="p-inputgroup p-col-6 p-row p-offset-3">
+  <div>
       <SpeedDial
         :model="speedDialActions"
         type="circle"
@@ -36,7 +37,6 @@
         direction="left"
         showIcon="pi pi-ellipsis-h"
       />
-    </div>
   </div>
 
   <!-- :style="{ 
@@ -529,9 +529,9 @@ export default defineComponent({
 .p-grid {
   margin: 5px;
 }
-.p-inputgroup {
-  width: 50%;
-}
+// .p-inputgroup {
+//   width: 50%;
+// }
 // TextArea {
 // height: 100%;
 // width: 100%;
