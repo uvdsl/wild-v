@@ -31,7 +31,7 @@
           <RadioButton
             id="Atomic"
             v-model="node_modified.data.type"
-            :value="WILD('AtomicActivity col')"
+            :value="WILD('AtomicActivity')"
           />
           <label for="Atomic"> Atomic</label>
         </div>
